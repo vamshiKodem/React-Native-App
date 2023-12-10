@@ -1,12 +1,14 @@
 import React from 'react';
 
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView} from 'react-native';
+import {Todo} from './src/todo/todo';
+import {Todo2} from './src/todo2/todo';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Hello</Text>
-    </SafeAreaView>
+    <>
+      <Todo />
+    </>
   );
 };
 
