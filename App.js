@@ -1,13 +1,13 @@
 import React from 'react';
 
-import {SafeAreaView} from 'react-native';
 import {Todo} from './src/todo/todo';
-import {Todo2} from './src/todo2/todo';
+import {Filter} from './src/filter/filter';
 
 const App = () => {
   return (
     <>
-      <Todo />
+      {/* <Todo /> */}
+      <Filter />
     </>
   );
 };
