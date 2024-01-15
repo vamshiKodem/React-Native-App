@@ -1,14 +1,29 @@
-import React, {useState} from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  ScrollView,
+  StyleSheet,
+  View,
+  Switch,
+  useColorScheme,
+} from 'react-native';
 import {ListItem, TextInput} from '@react-native-material/core';
 import {filterData} from './filterData';
 
 export const Filter = () => {
   const [input, setInput] = useState('');
+  const [theme, setTheme] = useState(false);
+  const currentMode = useColorScheme();
 
   return (
     <>
-      <View style={styles.textInputContainer}>
+      <Switch value={theme} onChange={() => setTheme(!theme)} />
+      <View
+        style={[
+          styles.textInputContainer,
+          {
+            backgroundColor: colors[currentMode],
+          },
+        ]}>
         <TextInput
           variant="outlined"
           label="State Name"
